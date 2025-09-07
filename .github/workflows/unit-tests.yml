@@ -15,4 +15,4 @@ jobs:
               run: docker build -t unit-tests-image -f Dockerfile .
 
             - name: Run image
-              run: docekr run --rm unit-tests-image 
+              run: docker run --rm unit-tests-image 
