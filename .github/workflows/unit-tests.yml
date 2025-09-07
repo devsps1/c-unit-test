@@ -4,15 +4,15 @@ on: [push]
 
 jobs:
     docker-unit-tests:
-    run-on: ubuntu-latest
-    name: Build anf run unit tests Docker image
-    steps:
+        run-on: ubuntu-latest
+        name: Build and run unit tests Docker image
+        steps:
 
-        - name: Check out this repo
-          uses: actions/checkout@v3
+            - name: Check out this repo
+              uses: actions/checkout@v3
 
-        - name: Build Docekr image
-          run: docker build -t unit-tests-image -f Dockerfile .
+            - name: Build Docekr image
+              run: docker build -t unit-tests-image -f Dockerfile .
 
-        - name: Run image
-          run: docekr run --rm unit-tests-image 
+            - name: Run image
+              run: docekr run --rm unit-tests-image 
