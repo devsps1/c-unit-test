@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
     docker-unit-tests:
-        run-on: ubuntu-latest
+        runs-on: ubuntu-latest
         name: Build and run unit tests Docker image
         steps:
 
